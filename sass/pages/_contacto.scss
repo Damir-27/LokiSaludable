@@ -1,0 +1,84 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as m;
+
+.contact-form{
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+
+    background: $beige;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    label{
+        font-weight: bold;
+        color: $verde-principal;
+    }
+
+    input,
+    textarea{
+        padding: 12px;
+        border: 2px solid $gris-borde;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    input:focus,
+    textarea:focus{
+        outline: none;
+        border-color: $verde-secundario;
+    }
+
+    textarea{
+        min-height: 150px;
+        resize: vertical;
+    }
+}
+
+.buttons{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+
+    input{
+        flex: 1;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: .3s;
+    }
+
+    input[type="submit"]{
+        background: $verde-secundario;
+        color: $blanco;
+
+        &:hover{
+            background: $verde-principal;
+        }
+    }
+
+    input[type="reset"]{
+        background: #d8d8d8;
+
+        &:hover{
+            background: #bfbfbf;
+        }
+    }
+}
+@include m.mobile{
+    .contact-form{
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .buttons{
+        flex-direction: column;
+    }
+}

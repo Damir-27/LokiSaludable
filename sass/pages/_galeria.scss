@@ -1,0 +1,64 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.titulo-galeria {
+    text-align: center;
+    margin: 40px 0;
+
+    h2 {
+        font-size: 3rem;
+        color: v.$verde-principal;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #555;
+    }
+}
+
+.galeria-nosotros {
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+        border-radius: 15px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+
+        transition: .3s ease;
+
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+        }
+    }
+}
+
+@include m.tablet {
+
+    .titulo-galeria h2 {
+        font-size: 2.5rem;
+    }
+
+    .galeria-nosotros img {
+        height: 250px;
+    }
+}
+
+@include m.mobile {
+
+    .titulo-galeria h2 {
+        font-size: 2rem;
+    }
+
+    .titulo-galeria p {
+        font-size: 1rem;
+    }
+
+    .galeria-nosotros img {
+        height: 220px;
+    }
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nova+Square&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+$verde-principal: #4E6625;
+$verde-secundario : #68853A;
+$verde-claro: #8DA35B;
+$fondo-principal: "../assets/fondo.jpg";
+
+$beige: #F8F2E7;
+$gris-borde: #D8D1C5;
+
+$blanco: white;
+$negro: #000;
+
+$fuente-principal: 'Montserrat', sans-serif;
+$fuente-titulo: 'DynaPuff', cursive;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente-principal;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-image: url("../assets/fondo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

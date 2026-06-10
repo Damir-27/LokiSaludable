@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.hero {
+    @include m.flex(column, nowrap, center, center, 0);
+
+    min-height: 70vh;
+    text-align: center;
+    padding: 40px;
+
+    h2 {
+        font-size: 3rem;
+        color: #0a0a0a;
+        margin-bottom: 20px;
+    }
+
+    p {
+        max-width: 800px;
+        font-size: 1.2rem;
+        color: $negro;
+        margin-bottom: 30px;
+    }
+}
+
+.btn-principal {
+    background: v.$verde-claro;
+    color: v.$blanco;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s;
+
+    &:hover {
+        background: v.$verde-principal;
+    }
+}
+
+@include m.mobile {
+    .hero {
+        padding: 20px;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .btn-principal {
+        padding: 12px 20px;
+    }
+}

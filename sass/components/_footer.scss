@@ -1,0 +1,61 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.footer {
+    @include m.flex(row, wrap, space-between, center, 20px);
+
+    background: v.$verde-principal;
+    color: v.$blanco;
+
+        p,
+            h3,
+                strong {
+        color: v.$blanco;
+    }
+
+    margin-top: 50px;
+    padding: 30px;
+
+    .rs {
+        display: flex;
+        gap: 15px;
+    }
+
+    .redes {
+        width: 40px;
+        height: 40px;
+
+        transition: .3s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+
+@include m.tablet {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+
+        .rs {
+            justify-content: center;
+        }
+    }
+}
+
+@include m.mobile {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+
+        .rs {
+            justify-content: center;
+        }
+
+        .redes {
+            width: 35px;
+            height: 35px;
+        }
+    }
+}

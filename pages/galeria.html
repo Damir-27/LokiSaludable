@@ -1,51 +1,98 @@
 <!DOCTYPE html>
 <html lang="es-ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loki Saludable - Galeria</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
     <header class="header">
-    <a href="../index.html">
-        <img src="../assets/shar-pei.png" alt="Logo de loki Saludable" class="logo">
-    </a>
-    <h1 class="titulo"> Bienvenidos a Loki Saludable</h1>
+        <a href="../index.html">
+            <img src="../assets/shar-pei.png" alt="Logo de loki Saludable" class="logo">
+        </a>
+        <h1 class="titulo"> Bienvenidos a Loki Saludable</h1>
 
-    <nav class="navegacion"> 
-        <ul>
-            <li>
-                <a href="./contacto.html">Contacto </a>
-            </li>
-            <li>
-                <a href="./nosotros.html">Historia</a>
-            </li>
-            <li>
-                <a href="./productos.html">Productos</a>
-            </li>
-        </ul>
-    </nav>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/nosotros.html">Historia</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/productos.html">Productos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/galeria.html">Galería</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
     </header>
 
-<main>
+    <main>
 
-    <section class="titulo-galeria">
-        <h2>🐾 Galería</h2>
-        <p>Conocé nuestro espacio, equipo y productos naturales para mascotas.</p>
-    </section>
+        <section class="titulo-galeria">
+            <h2>🐾 Galería</h2>
+            <p>Conocé nuestro espacio, equipo y productos naturales para mascotas.</p>
+        </section>
 
-    <div class="galeria-nosotros">
-        <img src="../assets/fachada.png" alt="Fachada de Loki Saludable">
-        <img src="../assets/staf.png" alt="Equipo de Loki Saludable">
-        <img src="../assets/interior.png" alt="Interior de la tienda">
-        <img src="../assets/productos.png" alt="Productos Loki Saludable">
-        <img src="../assets/productos 2.png" alt="Productos naturales para mascotas">
-    </div>
+        <section class="galeria-nosotros container">
 
-</main>
+            <div class="row g-4">
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="../assets/fachada.png" alt="Fachada de Loki Saludable">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="../assets/staf.png" alt="Equipo de Loki Saludable">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="../assets/interior.png" alt="Interior de la tienda">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="../assets/productos.png" alt="Productos Loki Saludable">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="../assets/productos 2.png" alt="Productos naturales para mascotas">
+                </div>
+
+            </div>
+
+        </section>
+    </main>
     <footer class="footer">
 
         <div class="footer-info">
@@ -87,6 +134,9 @@
         </nav>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

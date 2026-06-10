@@ -1,0 +1,98 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.nosotros {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 30px;
+        color: v.$verde-principal;
+        font-family: v.$fuente-titulo;
+    }
+}
+
+.contenido-nosotros {
+    background-color: rgba(248, 242, 231, .95);
+    padding: 30px;
+    border-radius: 20px;
+    line-height: 1.8;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        color: v.$verde-secundario;
+    }
+
+    ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Carrusel */
+
+.carousel {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.carousel-item img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 10px;
+
+    h3,
+    p {
+        color: white;
+        margin: 0;
+    }
+}
+
+/* Responsive */
+
+@include m.tablet {
+    .carousel-item img {
+        height: 350px;
+    }
+
+    .nosotros h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@include m.mobile {
+    .nosotros {
+        padding: 20px 10px;
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .contenido-nosotros {
+        padding: 20px;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+}

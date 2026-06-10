@@ -18,38 +18,64 @@
         </a>
         <h1 class="titulo"> Bienvenidos a Loki Saludable</h1>
 
-        <nav class="navegacion">
-            <ul>
-                <li>
-                    <a href="./galeria.html">Galeria</a>
-                </li>
-                <li>
-                    <a href="./nosotros.html">Historia</a>
-                </li>
-                <li>
-                    <a href="./productos.html">Productos</a>
-                </li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/nosotros.html">Historia</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/productos.html">Productos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/galeria.html">Galería</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
+    <main class="contacto">
 
-        <p>En LOKI SALUDABLE estamos siempre disponibles para ayudarte y asesorarte en el cuidado y alimentación de tu
-            mascota. Si tenés consultas sobre nuestros productos, recomendaciones nutricionales o querés realizar un
-            pedido, podés comunicarte con nosotros a través de nuestros canales de atención.</p>
+        <section class="info-contacto">
+            <h2>📞 Contactanos</h2>
 
-        <ul>🐾 Nuestro equipo estará feliz de brindarte una atención personalizada y ayudarte a encontrar la mejor
-            opción para tu compañero de cuatro patas.
-            <li>📍 Visitanos en nuestro local</li>
-            <li>📲 Atención por WhatsApp y redes sociales</li>
-            <li>📦 Consultá por envíos y pedidos personalizados</li>
-            <li>🕒 Horarios de atención flexibles para tu comodidad</li>
+            <p>
+                En <strong>LOKI SALUDABLE</strong> estamos siempre disponibles para ayudarte
+                y asesorarte en el cuidado y alimentación de tu mascota.
+            </p>
 
-            <li>En LOKI SALUDABLE, nos apasiona acompañarte en cada etapa del bienestar de tu mascota.</li>
-        </ul>
-        
+            <ul>
+                <li>📍 Visitanos en nuestro local</li>
+                <li>📲 Atención por WhatsApp y redes sociales</li>
+                <li>📦 Consultá por envíos y pedidos personalizados</li>
+                <li>🕒 Horarios de atención flexibles para tu comodidad</li>
+            </ul>
+        </section>
+
         <form action="" class="contact-form">
             <label for="name">Nombre</label>
             <input type="text" id="name" placeholder="Juan" required>
@@ -69,8 +95,10 @@
             <label for="comments">Dejanos tus comentarios</label>
             <textarea id="comments" placeholder="Comentarios"></textarea>
 
-            <input type="submit" value="Enviar" class="buttons">
-            <input type="reset" value="Comenzar de Nuevo" class="buttons">
+            <div class="buttons">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Comenzar de Nuevo">
+            </div>
         </form>
     </main>
     <footer class="footer">

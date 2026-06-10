@@ -1,0 +1,58 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.header{
+    @include m.flex(row, nowrap, space-between, center, 10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: v.$verde-principal;
+
+    padding:10px 25px;
+
+    border-bottom:2px solid #e5dfd3;
+
+    @include m.mobile{
+    .header{
+        flex-direction: column;
+    }
+}
+
+}
+
+
+.logo{
+    height:10vh;
+    width:auto;
+}
+
+.titulo{
+    font-family: v.$fuente-titulo;
+    font: size 3rem;;
+    color: v.$blanco;
+
+
+    @include m.tablet{
+        font-size: 2rem;
+    }
+
+@include m.mobile{
+        font-size: 0.75rem;
+        text-align: center;
+}
+}
+
+.navbar{
+    background-color: v.$verde-principal ;
+}
+
+.navbar-brand,
+.nav-link{
+    color: v.$blanco ;
+    font-family: v.$fuente-titulo;
+}
+
+.nav-link:hover{
+    color: v.$verde-claro ;
+}
