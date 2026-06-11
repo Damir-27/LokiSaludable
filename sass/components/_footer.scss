@@ -7,14 +7,15 @@
     background: v.$verde-principal;
     color: v.$blanco;
 
-        p,
-            h3,
-                strong {
+    p,
+    h3,
+    strong {
         color: v.$blanco;
+        margin: 0
     }
 
-    margin-top: 50px;
-    padding: 30px;
+    margin-top: 10px;
+    padding: 12px 20px;
 
     .rs {
         display: flex;
@@ -33,6 +34,24 @@
     }
 }
 
+img.wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 50px;
+    height: auto;
+    max-width: 70px;
+
+    z-index: 9999;
+
+    animation: vibrate 1s ease infinite;
+    transition: transform .3s ease;
+}
+
+.wa:hover {
+    transform: scale(1.1);
+}
 @include m.tablet {
     .footer {
         flex-direction: column;

@@ -1,7 +1,46 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as m;
 
-.contact-form{
+.contacto {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.info-contacto {
+    @include m.flex(column, nowrap, center, center, 20px);
+
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+
+    text-align: center;
+    background:$beige, .9;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+
+    h2 {
+        color: $verde-principal;
+    }
+
+    p,
+    li {
+        margin-bottom: 10px;
+        color: #20310F;
+        width: 100%;
+        max-width: 500px;
+
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+
+.contact-form {
+    @include m.flex(column, nowrap, flex-start, stretch, 10px);
     max-width: 600px;
     margin: 30px auto;
     padding: 30px;
@@ -9,43 +48,41 @@
     background: $beige;
     border-radius: 15px;
 
-    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 
-    label{
+    label {
         font-weight: bold;
         color: $verde-principal;
     }
 
-    input,
-    textarea{
-        padding: 12px;
-        border: 2px solid $gris-borde;
-        border-radius: 8px;
-        font-size: 1rem;
-    }
+input,textarea{
+    padding: 12px;
+    border: 2px solid $gris-borde;
+    border-radius: 8px;
+    font-size: 1rem;
 
-    input:focus,
-    textarea:focus{
-        outline: none;
-        border-color: $verde-secundario;
-    }
+    transition: border-color .3s ease,
+                box-shadow .3s ease;
+}
+input:focus,
+textarea:focus{
+    outline: none;
+    border-color: $verde-secundario;
+    box-shadow: 0 0 8px rgba($verde-secundario, .3);
+}
 
-    textarea{
+    textarea {
         min-height: 150px;
         resize: vertical;
     }
 }
 
-.buttons{
-    display: flex;
-    gap: 15px;
+.buttons {
+    @include m.flex(row, nowrap, center, center, 15px);
     margin-top: 15px;
 
-    input{
+    input {
         flex: 1;
         padding: 12px;
         border: none;
@@ -55,30 +92,46 @@
         transition: .3s;
     }
 
-    input[type="submit"]{
+    input[type="submit"] {
         background: $verde-secundario;
         color: $blanco;
 
-        &:hover{
+        &:hover {
             background: $verde-principal;
         }
     }
 
-    input[type="reset"]{
+    input[type="reset"] {
         background: #d8d8d8;
 
-        &:hover{
+        &:hover {
             background: #bfbfbf;
         }
     }
 }
-@include m.mobile{
-    .contact-form{
+.multimedia-contacto{
+    @include m.flex(row, wrap, center, center, 30px);
+
+    margin: 40px auto;
+
+    iframe{
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+
+        border: none;
+        border-radius: 15px;
+
+        box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    }
+}
+@include m.mobile {
+    .contact-form {
         margin: 20px;
         padding: 20px;
     }
 
-    .buttons{
+    .buttons {
         flex-direction: column;
     }
 }
